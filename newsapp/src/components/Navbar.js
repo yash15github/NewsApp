@@ -1,41 +1,42 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-export class Navbar extends Component {
-  render() {
+// export class Navbar extends Component {
+  const Navbar = () => {
+  // render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-dark">
+        <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             <div className="container-fluid" >
-                <Link className="navbar-brand" to="/" style={{color: 'white'}}>Navbar</Link>
+                <Link className="navbar-brand" to="/" style={{color: 'Red', fontWeight: 'bold'}}>My Times</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item"><li className="nav-item dropdown">
-                    <Link className="nav-link" to="/" style={{color: 'white'}}>Home</Link>
-                    </li></li>
-                    <li className="nav-item dropdown">
-                    <Link className="nav-link" to="/business" style={{color: 'white'}}>Business</Link>
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0" >
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/" >Home</Link>
                     </li>
                     <li className="nav-item dropdown">
-                    <Link className="nav-link" to="/entertainment" style={{color: 'white'}}>Entertainment</Link>
+                    <Link className="nav-link" to="/business" >Business</Link>
                     </li>
                     <li className="nav-item dropdown">
-                    <Link className="nav-link" to="/general" style={{color: 'white'}}>General</Link>
+                    <Link className="nav-link" to="/entertainment" >Entertainment</Link>
                     </li>
                     <li className="nav-item dropdown">
-                    <Link className="nav-link" to="/health" style={{color: 'white'}}>Health</Link>
+                    <Link className="nav-link" to="/general">General</Link>
                     </li>
                     <li className="nav-item dropdown">
-                    <Link className="nav-link" to="/science" style={{color: 'white'}}>Science</Link>
+                    <Link className="nav-link" to="/health" >Health</Link>
                     </li>
                     <li className="nav-item dropdown">
-                    <Link className="nav-link" to="/sports" style={{color: 'white'}}>Sports</Link>
+                    <Link className="nav-link" to="/science" >Science</Link>
                     </li>
                     <li className="nav-item dropdown">
-                    <Link className="nav-link" to="/technology" style={{color: 'white'}}>Technology</Link>
+                    <Link className="nav-link " to="/sports" >Sports</Link>
+                    </li>
+                    <li className="nav-item dropdown">
+                    <Link className="nav-link" to="/technology">Technology</Link>
                     </li>
                 </ul>
                 <form className="d-flex" role="search">
@@ -48,6 +49,6 @@ export class Navbar extends Component {
       </div>
     )
   }
-}
+// }
 
 export default Navbar
